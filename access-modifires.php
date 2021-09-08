@@ -16,14 +16,37 @@ There are three access modifiers:
 <!-- example - 01 -->
 
 <?php
+    // class Fruit{
+    //     public $name;
+    //     protected $color;
+    //     private $weight;
+    // }
+    // $obj = new Fruit();
+    // echo $obj->name = "Mango"; // it's work fine
+    // echo $obj->color = "Yellow"; // it's given error
+    // echo $obj->weight = 300; // it's given error
+
+    // example - 2
     class Fruit{
         public $name;
-        protected $color;
-        private $weight;
+        public $color;
+        public $weight;
+        // a public method (default)
+        public function set_name($n){
+           return $this->name = $n;
+        }
+        // a protected method
+        protected function set_color($c){
+            return $this->color = $c;
+        }
+        // a private method
+        private function set_weight($w){
+            return $this->weight = $w;
+        }
     }
     $obj = new Fruit();
-    echo $obj->name = "Mango"; // it's work fine
-    echo $obj->color = "Yellow"; // it's given error
-    echo $obj->weight = 300; // it's given error
+    echo $obj->set_name("Mango"); // it's work fine
+    // echo $obj->set_color("Yellow"); // it's given error
+    // echo $obj->set_weight(300); // it's given error
 
 ?>
