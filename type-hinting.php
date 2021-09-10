@@ -14,4 +14,11 @@
     // }
     // sum(10); // it's work
     // sum("String"); // it's give error
+
+    // for solve this problem we can use type hinting like this
+    // function sum(int $a){
+    //     echo $a + 1;
+    // }
+    // sum(10); // it's work
+    // sum("Hello"); // it also give error but prevent unnecessary time westing.
 ?>
