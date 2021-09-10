@@ -33,19 +33,45 @@
     // fruits($test);
 
     // let's see another example in oop
-    class hello{
-        public function sayHello(){
-            echo "Hello Everyone";
+    // class hello{
+    //     public function sayHello(){
+    //         echo "Hello Everyone";
+    //     }
+    // }
+    // class bye{
+    //     public function sayBye(){
+    //         echo "Bye Everyone";
+    //     }
+    // }
+    // function wow(bye $c){
+    //     $c->sayBye();
+    // }
+    // $obj = new bye();
+    // wow($obj);
+
+    // let's see real example
+    class school{
+        public function getNames(student $names){
+            echo "<ul>";
+            foreach($names->names() as $name){
+                echo "<li>" . $name . "</li>";
+            }
+            echo "</ul>";
         }
     }
-    class bye{
-        public function sayBye(){
-            echo "Bye Everyone";
+    class student{
+        public function names(){
+            return ["Sujon","Alamin","Toukir"];
         }
     }
-    function wow(bye $c){
-        $c->sayBye();
+    class library{
+
     }
-    $obj = new bye();
-    wow($obj);
+    $stu = new student();
+    $sch = new school();
+    $lib = new library();
+     // $sch->getNames($lib);//it's give fatal error without type hinting
+    // $sch->getNames($lib);//it's give getNames() must be an instance of student, by type hinting
+    $sch->getNames($stu);
+
 ?>
