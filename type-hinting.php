@@ -23,11 +23,29 @@
     // sum("Hello"); // it also give error but prevent unnecessary time westing.
 
     // let's see another example
-    function fruits(array $names){
-        foreach($names as $name){
-            echo $name . "<br>";
+    // function fruits(array $names){
+    //     foreach($names as $name){
+    //         echo $name . "<br>";
+    //     }
+    // }
+    // $test = ["Mango","Apple","Banana"];
+    // $test = "Mango"; // it's give error
+    // fruits($test);
+
+    // let's see another example in oop
+    class hello{
+        public function sayHello(){
+            echo "Hello Everyone";
         }
     }
-    $test = ["Mango","Apple","Banana"];
-    fruits($test);
+    class bye{
+        public function sayBye(){
+            echo "Bye Everyone";
+        }
+    }
+    function wow(bye $c){
+        $c->sayBye();
+    }
+    $obj = new bye();
+    wow($obj);
 ?>
