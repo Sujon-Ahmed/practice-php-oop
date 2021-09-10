@@ -21,4 +21,13 @@
     // }
     // sum(10); // it's work
     // sum("Hello"); // it also give error but prevent unnecessary time westing.
+
+    // let's see another example
+    function fruits(array $names){
+        foreach($names as $name){
+            echo $name . "<br>";
+        }
+    }
+    $test = ["Mango","Apple","Banana"];
+    fruits($test);
 ?>
