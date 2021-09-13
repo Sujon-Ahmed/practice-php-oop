@@ -14,4 +14,20 @@
 $obj = new abc();
 echo $obj->name; */
 
+// example -2
+
+class abc{
+    private $data = ["name"=>"Sujon", "course"=>"PHP", "fee"=>"8000"];
+    public function __get($key)
+    {
+        if(array_key_exists($key, $this->data)){
+            return $this->data[$key];
+        }else{
+            return "This key ($key) is not defined.";
+        }
+    }
+}
+$obj = new abc();
+echo $obj->age;
+
 ?>
