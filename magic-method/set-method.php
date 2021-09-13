@@ -4,8 +4,8 @@
  -->
 
  <?php
-
-class abc{
+// example-1
+/* class abc{
     private $name;
     public function __get($property)
     {
@@ -16,6 +16,27 @@ class abc{
     }
 }
 $obj = new abc();
+$obj->name = "Sujon Ahmed"; */
+
+// example-2 
+class student{
+    private $name;
+    public function show(){
+        echo $this->name;
+    }
+    public function __get($property){
+        echo "You are trying to access non existing or private property ($property)";
+    }
+    public function __set($property, $value){
+        if(property_exists($this, $property)){
+            $this->$property = $value;
+        }else{
+            echo "Property does not exist : $property";
+        }
+    }
+}
+$obj = new student();
 $obj->name = "Sujon Ahmed";
+$obj->show();
 
 ?>
