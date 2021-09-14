@@ -1,5 +1,5 @@
 <!-- 
-    1.when someone tring to access and set private or non existing property value then __set() method called automatically.
+    1.when someone trying to access and set private or non existing property value then __set() method called automatically.
     2.__set($pro,$val) take two aru for showing this property name and value.
  -->
 
