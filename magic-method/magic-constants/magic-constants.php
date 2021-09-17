@@ -11,10 +11,18 @@
 
 // magic constants __FUNCTION__
 // echo "The FUNCTION Name : " .__FUNCTION__; // RETURN Nothing
-function myFunction(){
+/* function myFunction(){
     echo "The FUNCTION Name : " .__FUNCTION__; // NOW RETURN FUNCTION NAME
 }
-myFunction();
+myFunction(); */
 
+// magic constants __CLASS__
+class myClass{
+    public function getClassName(){
+        return __CLASS__;
+    }
+}
+$obj = new myClass();
+echo $obj->getClassName();
 
 ?>
