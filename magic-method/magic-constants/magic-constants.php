@@ -1,5 +1,4 @@
 <?php
-namespace myNamespace;
 // magic constants __LINE__
 // echo "Line Number : " .__LINE__."<br>";
 // echo "Line Number : " .__LINE__;
@@ -36,13 +35,26 @@ myFunction(); */
 // echo $obj->getClassName();
 
 // magic constants __NAMESPACE__
-class myClass{
+// namespace myNamespace;
+/* class myClass{
     public function getNamespace(){
         // return __NAMESPACE__; // RETURN just namespace name
         return __CLASS__; // Return namespace with class name
     }
 }
 $obj = new myClass();
-echo $obj->getNamespace();
+echo $obj->getNamespace(); */
+
+// magic constants __TRAIT__
+trait myTrait{
+    public function getTraitName(){
+        return __TRAIT__;
+    }
+}
+class myClass{
+    use myTrait;
+}
+$obj = new myClass();
+echo $obj->getTraitName();
 
 ?>
