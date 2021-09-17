@@ -17,12 +17,22 @@
 myFunction(); */
 
 // magic constants __CLASS__
-class myClass{
-    public function getClassName(){
-        return __CLASS__;
+// class myClass{
+//     public function getClassName(){
+//         return __CLASS__;
+//     }
+// }
+// $obj = new myClass();
+// echo $obj->getClassName();
+
+// magic constants __METHOD__
+    class myClass{
+        public function getClassName(){
+            return __METHOD__;
+        }
     }
-}
-$obj = new myClass();
-echo $obj->getClassName();
+    $obj = new myClass();
+    echo $obj->getClassName();
+
 
 ?>
