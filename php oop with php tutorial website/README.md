@@ -28,6 +28,58 @@ These bank accounts are created from the same blueprint. In object-oriented term
 
 By definition, a class is the blueprint of objects. For example, from the Bank Account class, you can create many bank account objects.
 
-The following illustrates the relationship between the BankAccount class and its objects. From the BankAccount class you can create many BankAccount objects. And each object has its own account number and balance.
+The following illustrates the relationship between the `BankAccount` class and its objects. From the `BankAccount` class you can create many `BankAccount` objects. And each object has its own account number and balance.
 
 ![php objects](images/PHP-Objects.png)
+
+## Define a class
+To define a class, you specify the `class` keyword followed by a name like this:
+```php
+<?php
+
+class className
+{
+    //...
+}
+```
+
+For example, the following defines a new class called `BankAccount`:
+
+```php
+<?php
+
+class className
+{
+}
+```
+
+By convention, you should follow these rules when defining a class:
+
+- A class name should be in the upper camel case where each word is capitalized. For example, `BankAccount`, `Customer`, `Transaction`, and `DebitNote`.
+
+- If a class name is a noun, it should be in the singular noun.
+
+- Define each class in a separate PHP file.
+
+From the `BankAccount` class, you can create a new bank account object by using the `new` keyword like this:
+
+```php
+<?php
+
+class BankAccount
+{
+}
+
+$account = new BankAccount();
+```
+
+In this syntax, the `$account` is a variable that references the object created by the `BankAccount` class. The parentheses that follow the `BankAccount` class name are optional. Therefore, you can create a new `BankAccount` object like this:
+
+```php
+$account = new BankAccount;
+```
+
+The process of creating a new object is also called instantiation. In other words, you instantiate an object from a class. Or you create a new object from a class.
+
+The `BankAccount` class is empty because it doesn’t have any state and behavior.
+
